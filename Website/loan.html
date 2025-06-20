@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply for Loan - Bank of Vijay Mallya</title>
+  <link rel="stylesheet" href="Backend/loan.css">
+</head>
+<body>
+
+  <h2>Loan Application Form</h2>
+
+  <form action="Backend/loan.php" method="POST">
+    <label for="customer_name">Customer Name:</label>
+    <input type="text" id="customer_name" name="customer_name" required>
+
+    <label for="loan-types">Loan Types:</label>
+    <select name="loan-types" id="loan_type">
+        <option value="personal_loan">Personal Loan</option>
+        <option value="car_loan">Car Loan</option>
+        <option value="home_loan">Home Loan</option>
+        <option value="business_loan">Business Loan</option>
+    </select>
+
+    <label for="loan_amount">Loan Amount (₹):</label>
+    <input type="number" id="loan_amount" name="loan_amount" min="50000" max="50000000" required>
+
+    <label for="duration">Duration (in Year):</label>
+    <input type="number" id="duration" name="duration" min="1" max="15" required>
+
+    <label for="interest_rate">Interest Rate (%):</label>
+    <input type="number" step="0.01" id="interest_rate" name="interest_rate" min="6" max="20" required>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+</body>
+</html>
